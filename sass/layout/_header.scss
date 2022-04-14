@@ -1,0 +1,112 @@
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.portfolio-header {
+    border-bottom: 1px solid #ededed;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list-item+.nav-list-item {
+    margin-left: 50px;
+}
+
+.nav-list-link {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    transition-property: color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
+}
+
+.nav-list-link:hover,
+.nav-list-link:focus {
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.current {
+    position: relative;
+    color: var(--accent-color);
+}
+
+.current::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 44px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+}
+
+.header-contact-list {
+    display: flex;
+    margin-left: auto;
+}
+
+.header-contact-list-item+.header-contact-list-item {
+    margin-left: 30px;
+}
+
+.header-contact-list-item {
+    display: flex;
+    align-items: center;
+}
+
+.header-contact-link {
+    display: flex;
+    align-items: center;
+
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color);
+    transition-property: color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
+}
+
+.header-contact-link:hover,
+.header-contact-link:focus {
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.header-contact-link:hover .header-contacts-icon,
+.header-contact-link:focus .header-contacts-icon {
+    fill: var(--accent-color);
+    cursor: pointer;
+}
+
+.header-contacts-icon {
+    fill: var(--secondary-text-color);
+    margin-right: 10px;
+    transition-property: fill;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
+}
