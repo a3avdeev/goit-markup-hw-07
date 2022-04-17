@@ -36,43 +36,49 @@
     transition-property: color;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        cursor: pointer;
+    }
 }
 
-.nav-list-link:hover,
-.nav-list-link:focus {
-    color: var(--accent-color);
-    cursor: pointer;
-}
+
 
 .current {
     position: relative;
     color: var(--accent-color);
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 44px;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--accent-color);
+    }
 }
 
-.current::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 44px;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--accent-color);
-}
+
 
 .header-contact-list {
     display: flex;
     margin-left: auto;
 }
 
-.header-contact-list-item+.header-contact-list-item {
-    margin-left: 30px;
-}
+
 
 .header-contact-list-item {
     display: flex;
     align-items: center;
+
+    &+& {
+        margin-left: 30px;
+    }
 }
 
 .header-contact-link {
@@ -89,19 +95,17 @@
     transition-property: color;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        cursor: pointer;
+    }
 }
 
-.header-contact-link:hover,
-.header-contact-link:focus {
-    color: var(--accent-color);
-    cursor: pointer;
-}
 
-.header-contact-link:hover .header-contacts-icon,
-.header-contact-link:focus .header-contacts-icon {
-    fill: var(--accent-color);
-    cursor: pointer;
-}
+
+
 
 .header-contacts-icon {
     fill: var(--secondary-text-color);
@@ -109,4 +113,10 @@
     transition-property: fill;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+
+    .header-contact-link:hover &,
+    .header-contact-link:focus & {
+        fill: var(--accent-color);
+        cursor: pointer;
+    }
 }

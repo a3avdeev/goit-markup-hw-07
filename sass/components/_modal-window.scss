@@ -33,12 +33,14 @@
     transition-property: fill;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+
+    .modal-close-button:hover &,
+    .modal-close-button:focus & {
+        fill: var(--accent-color);
+    }
 }
 
-.modal-close-button:hover .modal-close-icon,
-.modal-close-button:focus .modal-close-icon {
-    fill: var(--accent-color);
-}
+
 
 .contact-form-title {
     font-family: var(--font-family);
@@ -62,13 +64,15 @@
     transition-property: border-color;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+
+    &:focus {
+        outline: none;
+        border-color: var(--accent-color);
+        cursor: pointer;
+    }
 }
 
-.contact-form-input:focus {
-    outline: none;
-    border-color: var(--accent-color);
-    cursor: pointer;
-}
+
 
 .contact-form-field-wrapper {
     position: relative;
@@ -85,11 +89,13 @@
     transition-property: fill;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+
+    .contact-form-input:focus+& {
+        fill: var(--accent-color);
+    }
 }
 
-.contact-form-input:focus+.contact-form-icon {
-    fill: var(--accent-color);
-}
+
 
 .contact-form-label {
     margin-bottom: 10px;
@@ -115,21 +121,23 @@
     transition-property: border-color;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+
+    &:focus {
+        outline: none;
+        border-color: var(--accent-color);
+    }
+    
+    &::placeholder {
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.01em;
+    }
 }
 
-.contact-form-message:focus {
-    outline: none;
-    border-color: var(--accent-color);
-}
 
-.contact-form-message::placeholder {
-    font-family: var(--font-family);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.01em;
-}
 
 .policy-label {
     font-family: var(--font-family);
@@ -143,28 +151,30 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    &::before {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid black;
+        content: "";
+        cursor: pointer;
+        margin-right: 8px;
+        border-radius: 2px;
+
+        .policy-checkbox:checked+& {
+            background-color: var(--accent-color);
+            border-radius: 2px;
+            background-image: url(../img/svg/Vector.svg);
+            background-size: contain;
+            background-origin: border-box;
+            background-repeat: no-repeat;
+            border-color: transparent;
+        }
+    }
 }
 
-.policy-label::before {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border: 1px solid black;
-    content: "";
-    cursor: pointer;
-    margin-right: 8px;
-    border-radius: 2px;
-}
 
-.policy-checkbox:checked+.policy-label::before {
-    background-color: var(--accent-color);
-    border-radius: 2px;
-    background-image: url(../img/svg/Vector.svg);
-    background-size: contain;
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    border-color: transparent;
-}
 
 .link-form {
     color: var(--accent-color);
@@ -193,9 +203,10 @@
     text-align: center;
     letter-spacing: 0.06em;
     color: #FFFFFF;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
 }
 
-.contact-form-button:hover,
-.contact-form-button:focus {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}

@@ -28,6 +28,12 @@ address {
     transition-property: color;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        cursor: pointer;
+    }
 }
 
 .footer-contacts-link {
@@ -41,19 +47,17 @@ address {
     transition-property: color;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        cursor: pointer;
+    }
 }
 
-.footer-contacts-address:hover,
-.footer-contacts-address:focus {
-    color: var(--accent-color);
-    cursor: pointer;
-}
 
-.footer-contacts-link:hover,
-.footer-contacts-link:focus {
-    color: var(--accent-color);
-    cursor: pointer;
-}
+
+
 
 .footer-social {
     margin-left: 70px;
@@ -93,6 +97,12 @@ address {
     transition-property: background-color;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        cursor: pointer;
+    }
 }
 
 .footer-social-link-icon {
@@ -100,19 +110,17 @@ address {
     transition-property: fill;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+
+    .footer-social-link:hover &,
+    .footer-social-link:focus & {
+        fill: #ffffff;
+        cursor: pointer;
+    }
 }
 
-.footer-social-link:hover .footer-social-link-icon,
-.footer-social-link:focus .footer-social-link-icon {
-    fill: #ffffff;
-    cursor: pointer;
-}
 
-.footer-social-link:hover,
-.footer-social-link:focus {
-    background-color: var(--accent-color);
-    cursor: pointer;
-}
+
+
 
 .footer-subscribe-mail {
     width: 358px;
@@ -148,12 +156,14 @@ address {
     text-align: center;
     letter-spacing: 0.06em;
     color: #FFFFFF;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
 }
 
-.footer-subscribe-button:hover,
-.footer-subscribe-button:focus {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
+
 
 .button-icon {
     margin-left: 10px;
