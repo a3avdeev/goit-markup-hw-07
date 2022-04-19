@@ -399,7 +399,7 @@ li {
   align-items: center;
 }
 
-.nav-list__item + .nav-list-__item {
+.nav-list__item + .nav-list__item {
   margin-left: 50px;
 }
 
@@ -443,12 +443,12 @@ li {
   margin-left: auto;
 }
 
-.header-contact__list-item {
+.header-contact__item {
   display: flex;
   align-items: center;
 }
 
-.header-contact__list-item + .header-contact__list-item {
+.header-contact__item + .header-contact__item {
   margin-left: 30px;
 }
 
