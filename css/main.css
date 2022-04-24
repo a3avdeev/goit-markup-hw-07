@@ -340,6 +340,7 @@ li {
   background-image: url(../img/svg/Vector.svg);
   background-size: contain;
   background-origin: border-box;
+  background-position: center;
   background-repeat: no-repeat;
   border-color: transparent;
 }
